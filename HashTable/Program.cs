@@ -20,3 +20,4 @@ myMap.Add("17", "avoidable");
 myMap.Add("18", "situations");
 string hash = myMap.Get("1");
 Console.WriteLine("index value: " + hash);
+myMap.Remove("2");

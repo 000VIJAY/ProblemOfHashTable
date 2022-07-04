@@ -50,5 +50,25 @@ namespace HashTable
             }
             return default(v);
         }
+        public void Remove(k key)
+        {
+            int position = GetHashPosition(key);
+            LinkedList<Node<k, v>> list = GetLinkedList(position);
+            bool iFound = false;
+            Node<k, v> items = default(Node<k, v>);
+            foreach (Node<k, v> item in list)
+            {
+                if (item.Key.Equals(key))
+                {
+                    iFound = true;
+                    items = item;
+                }
+                if (iFound)
+                {
+                    list.Remove(items);
+                }
+            }
+        }
+
     }
 }
