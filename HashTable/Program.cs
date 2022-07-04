@@ -1,1 +1,10 @@
-﻿Console.WriteLine("Welcome to Program for Hash Table");
+﻿using HashTable;
+myMapNode<string, string> myMap = new myMapNode<string, string>(20);
+myMap.Add("0", "to");
+myMap.Add("1", "be");
+myMap.Add("2", "or");
+myMap.Add("3", "not");
+myMap.Add("4", "to");
+myMap.Add("5", "be");
+string hash = myMap.Get("1");
+Console.WriteLine("index value: " + hash);
